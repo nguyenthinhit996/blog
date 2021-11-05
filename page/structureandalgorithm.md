@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  Structure - Algorithm
-subtitle: Data Structures & Algorithm using Java
+title:  Structure Algorithm
+subtitle: Data Structures & Algorithm Search Sort
 ---
 
 ### [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29)

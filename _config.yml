@@ -14,18 +14,18 @@ author: Peter
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  Java: "#"
-  Structure Algorithm : "#"
-  Javascript: "#"
+  Java: "page/java"
+  Structure Algorithm : "page/structureandalgorithm"
+  Javascript: "page/js"
   DevOps RoadMap:
-    - OS: "#"
-    - Terminal: '#'
-    - Net-Sec: '#'
-    - WebServer: "#"
-    - Infrastructure: '#'
-    - CICD: "#"
-    - monitor: '#'
-    - Cloud Provides: '#'
+    - OS: "page/devops"
+    - Terminal: 'page/devops'
+    - Net-Sec: 'page/devops'
+    - WebServer: "page/devops"
+    - Infrastructure: 'page/devops'
+    - CICD: "page/devops"
+    - monitor: 'page/devops'
+    - Cloud Provides: 'page/devops'
   About Me: "page/aboutme"
 
 # --- Logo --- #

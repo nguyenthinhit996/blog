@@ -18,9 +18,14 @@ navbar-links:
   Structure And Algorithm : "#"
   Javascript: "#"
   DevOps:
-    - Linux: "#"
+    - OS: "#"
+    - Terminal: '#'
+    - Net-Sec: '#'
     - WebServer: "#"
+    - Infrastructure: '#'
     - CICD: "#"
+    - monitor: '#'
+    - Cloud Provides: '#'
   About Me: "aboutme"
 
 # --- Logo --- #

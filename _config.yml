@@ -15,9 +15,9 @@ author: Peter
 
 navbar-links:
   Java: "#"
-  Structure And Algorithm : "#"
+  Structure Algorithm : "#"
   Javascript: "#"
-  DevOps:
+  DevOps Map:
     - OS: "#"
     - Terminal: '#'
     - Net-Sec: '#'

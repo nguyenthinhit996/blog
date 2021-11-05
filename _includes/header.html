@@ -38,9 +38,9 @@
           {% endif %}
 
           {% if include.type == "post" %}
-<!--            {% if page.author %}-->
-<!--              <span class="post-meta"> Author {{ page.author | strip_html }}, </span>-->
-<!--            {% endif %}-->
+            {% if page.author %}
+              <span class="post-meta"> Author {{ page.author | strip_html }}, </span>
+            {% endif %}
             <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
             {% if page.last-updated %}
               <span class="post-meta">
@@ -75,9 +75,9 @@
           {% endif %}
 
           {% if include.type == "post" %}
-<!--            {% if page.author %}-->
-<!--              <span class="post-meta"> Author {{ page.author | strip_html }}, </span>-->
-<!--            {% endif %}-->
+            {% if page.author %}
+              <span class="post-meta"> Author {{ page.author | strip_html }}, </span>
+            {% endif %}
             <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
             {% if page.last-updated %}
               <span class="post-meta">

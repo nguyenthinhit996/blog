@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DevOps Learning Paths
+title: DevOps
 subtitle: The Roadmap to Become DevOps Engineer
 ---
 

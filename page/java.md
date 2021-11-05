@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Java Learning Paths
+title: Java
 subtitle: We can handle all skill in java
 ---
 

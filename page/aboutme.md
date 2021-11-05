@@ -1,16 +1,16 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Why you'd want to go on a date with me :)
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
+My name is Peter, I came to earth to acquire knowledge and share it with everyone here.
+I love everything in the world. from the small to the big. I like to travel by motorbike and see
+everything grows. Life begins with a small thing. Because i really like the song Little Thing Called Love of Ronan Keating.
+Let's enjoy with me ,life is still beautiful. Never give up your studies if you are still alive.
 
 What else do you need?
 
-### My story
+Please tell me if you want. Contact me through social media below. 
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Thanks Have a nice day!

@@ -17,11 +17,12 @@ If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
 1. [Overview Java](#giới-thiệu-java)
 2. [Lịch Sử](#lịch-sử)
 3. [Tính năng](#tính-năng)
-4. [Chi tiết Run](#chú-ý)
-4. [Download Java và set path](#chú-ý)
-4. [JDK, JRE và JVM](#chú-ý)
-4. [DataType](#chú-ý)
-4. [Operator](#chú-ý)
+4. [Chi tiết Run](#chi-tiết-run)
+4. [Download Java và set path](#download-java-và-set-path)
+4. [JDK, JRE và JVM](#jdk-jre-và-jvm)
+4. [Biến](#variable)
+4. [DataType](#datatype)
+4. [Operator](#operator)
 4. [Keyword](#chú-ý)
 
 
@@ -84,7 +85,9 @@ miễn ở đâu có JRE java runtime enviroment, có 2 loại platform là ph�
 viruss. Because các lí do sau: 
   - No use pointer 
   - Java program run bên trong a virtual machine sandbox.  
-  [java-security.png]  
+  
+  ![java-security.png](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/java-security.png)
+  
   - Clasloader: là một phần của JRE nó được sử dụng để load java classes vào trong JRE
   nó thể phần bảo vệ bằng các tách package các class ở local ra các resource được import từ network.
   - ByteCode verify: nó check các đoạn code hợp lệ ngăn chặn truy cập bất hợp pháp đến objects.
@@ -112,10 +115,14 @@ program bằng hiều task tại 1 thời điểm bằng định nghĩa multiple
 
 Một ứng dụng java có 2 giai đoạn để thực thi đó là complier và runtime, 
 vậy cách complier (không tác động đến OS) như thế nào nào hãy xem bên dưới.   
-Complier file.java to file.class  
-[javacodecompile.png]  
-khi đã có file.class thì ra run file.class vậy lúc run time sẽ theo flow bên dưới: 
-[java-runtime-processing.png]  
+Complier file.java to file.class    
+
+![javacodecompile.png](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/javacodecompile.png)
+
+khi đã có file.class thì ra run file.class vậy lúc run time sẽ theo flow bên dưới:  
+
+![java-runtime-processing.png](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/java-runtime-processing.png)
+
 ClassLoader: là 1 tiến trình con của JRE.
 ByteCode Verifier: Kiểm tra đoan code có hợp lệ để tránh truy cập bất hợp pháp đối tượng 
 Interpreted: Read bytecode stream sau đó thực thi diễn giải code.  
@@ -126,21 +133,20 @@ link: https://jdk.java.net/java-se-ri/18
 
 Có 2 loại set: 
 - tạm thời:
-   >cmd: set path=C:\Program Files\Java\jdk1.6.0_23\bin
+   > **cmd: set path=C:\Program Files\Java\jdk1.6.0_23\bin**
 - lâu dài set enviroment:  
   search "environment variables"  
-  [evn01.PNG]  
+  ![evn01.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn01.PNG)  
   Thêm dòng JAVA_HOME
-  [evn02.PNG]  
+  ![evn02.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn02.PNG)  
   Thêm vào path  
-  [evn03.PNG]   
-  [evn04.PNG]  
+  ![evn03.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn03.PNG)   
+  ![evn04.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn04.PNG)  
 
 ## JDK, JRE và JVM
 
 - JDK, JRE and JVM là platform phụ thuộc vào OS, mỗi OS khác nhau sẽ có sự configuaration khác
-nhau, nhưng Java là 1 platform độc lập. có thể run mọi OS, miễn sau ở đó có JVM đã cài đặc.
-
+nhau, nhưng Java là 1 platform độc lập. có thể run mọi OS, miễn sau ở đó có JVM đã cài đặt.
 - JVM viết tắt của Java Virtual Machine là máy 1 máy ảo, được gọi là máy ảo vì nó không tồn tại vật lí.
 JVM cung cấp runtime enviroment mà nơi đó thực thi bytecode. Ở đó cũng thực thi được 
   các chương trình được viết từ những ngôn ngữ khác được complier thành java bytecode.
@@ -215,8 +221,7 @@ Primitive Data Type:
 Để sử dung kiểu float và double chúng ta nên nói đến độ chính xác (precision) là con số thập phân
 sau dấu chấm, kiểu float thì có 6 hoặc 7 con số còn kiểu double thì khoản 15 chữ số sau dấu chấm.  
 float : xxx.1234567  
-double: xxx.123456789123456
-
+double: xxx.123456789123456   
 Đối với kiểu Char: Java sử dụng Unicode System.
 
 ## Operator

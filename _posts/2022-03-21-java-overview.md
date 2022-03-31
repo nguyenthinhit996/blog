@@ -274,6 +274,10 @@ double: xxx.123456789123456
       //reset value
      System.out.println(valueA - valueB); // 0
   ```  
+  
+
+
+   
 - **Shift** <<, >>, >>>  
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
@@ -299,7 +303,7 @@ double: xxx.123456789123456
     System.out.println(str instanceof String); // always return true
     System.out.println(object instanceof InstanceClass); // always return false
     System.out.println(object2 instanceof InstanceClass); // return true
-  ```  
+  ```
 - **Bitwise** & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
@@ -366,7 +370,7 @@ double: xxx.123456789123456
         //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
     }
   ```
-v2
+v3
 ## Keyword
 
 1. abstract: là keyword để khởi tao một class h

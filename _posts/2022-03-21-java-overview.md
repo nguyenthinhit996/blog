@@ -260,7 +260,7 @@ double: xxx.123456789123456
   lật bit 0000000000001010 become 1111111111110101 = -11  
   -10 => 1111111111110110  
   lât bit 1111111111110110 become 0000000000001001 = 9
-  
+      
   
 - **Tính toán(Arithmetic)** * / + - %
 
@@ -276,8 +276,8 @@ double: xxx.123456789123456
     //reset value
    System.out.println(valueA - valueB); // 0
 ```
+    
   
-
 - **Shift** <<, >>, >>>  
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
@@ -294,8 +294,8 @@ double: xxx.123456789123456
    // push đủ 32 bit : 1111111111111111111111111110110
    // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```
-
-
+      
+  
 - **Relational**  comparison: < > <= >= instanceof,  equality: == !=
   ```java
   class InstanceClass {}
@@ -307,8 +307,8 @@ double: xxx.123456789123456
   System.out.println(object2 instanceof InstanceClass); // return true
   
   ```
+      
   
-
 - **Bitwise** & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
@@ -320,13 +320,13 @@ double: xxx.123456789123456
   System.out.println(valueA ^ valueB); // 0011 = 3
   System.out.println(valueA | valueB); // 1011 = 11
   ```
+      
   
-
 - **Logical** && ||
   logical AND && : all true => true
   logical OR || : only one condition true => true
-
-
+    
+  
 - **Ternary** ? :
   ```java
   if(condition == true) {
@@ -339,16 +339,16 @@ double: xxx.123456789123456
   return condition == true ? a : b;
   
   ```
+      
   
-
 - **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
   Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
   ? là Assignment
   ```java
    System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
   ```
+      
   
-
 - **Chú ý về operator**
   ```java
   // Operator && vs & : tất cả true thì sẽ true

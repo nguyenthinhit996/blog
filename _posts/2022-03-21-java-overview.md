@@ -136,10 +136,14 @@ Có 2 loại set:
    > **cmd: set path=C:\Program Files\Java\jdk1.6.0_23\bin**
 - lâu dài set enviroment:  
   search "environment variables"  
+  
   ![evn01.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn01.PNG)  
-  Thêm dòng JAVA_HOME
+  Thêm dòng JAVA_HOME  
+  
   ![evn02.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn02.PNG)  
-  Thêm vào path  
+  
+  Thêm vào path    
+
   ![evn03.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn03.PNG)   
   ![evn04.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/evn04.PNG)  
 
@@ -152,8 +156,9 @@ JVM cung cấp runtime enviroment mà nơi đó thực thi bytecode. Ở đó c�
   các chương trình được viết từ những ngôn ngữ khác được complier thành java bytecode.
 - JRE viết tắt của Java Runtime Environment là bộ công cụ phần mêm được sử dụng bở dev java.
 JRE bao ngồm JVM và 1 số thư viện bên trong đó ví dụ: rt.jar.
-- JDK viết tắt của Java Development Kit. JDK bao ngồm JRE và thêm 1 số tools như javac, java, ...
-[jdk.png]
+- JDK viết tắt của Java Development Kit. JDK bao ngồm JRE và thêm 1 số tools như javac, java, ...  
+
+![jdk.png](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/jdk.png)
   
 ## Variable  
 Variable là biến của java, sẽ giữ giá trị trong chương trình java lúc thực thi. Mỗi biến
@@ -198,8 +203,9 @@ public class ShareFullCode {
 Data type xác định sự khác nhau về khích thước và giá trị lưu trữ của biến. Có 2 kiểu của Data Type: 
 - Primitive data type: Kiểu nguyên thủy như là *boolean, char, byte, short, int, float, double, long.*
 Là những loại đã đựơc xây dựng sẵn trong java, có giá trị default khác null.
-- Non Primitive data type: Kiểu không phải nguyên thủy như Classes, Interfaces, Array, String,...
-[java-data-types.png]
+- Non Primitive data type: Kiểu không phải nguyên thủy như Classes, Interfaces, Array, String,...  
+
+![java-data-types.png](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/java-data-types.png)
 
 Primitive Data Type:  
 

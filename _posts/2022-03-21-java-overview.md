@@ -381,7 +381,94 @@ double: xxx.123456789123456
 
 ## Keyword
 
-1. abstract: là keyword để khởi tao một class h
+- **abstract**: là keyword để khởi tao một class trừu tượng. 1 class trừu tượng không thể
+có instance mà phải chỉ lớp implement class trừu tương mới có thể tạo instance. abstract có thể khởi tạo 1 
+  method với method không có body và được override bởi class implements.
+- **boolean**: là 1 datatype primitive được khởi tạo 1 variable. có thể mang giá trị true hoặc false, mặc định lúc
+khởi tạo là false.
+- **break**: break được sử dụng thoát khỏi vòng lặp hoặc while gần nhất. Và sử dụng trong switch. những code phía dưới break không được thực thi.
+- **byte**: là 1 data type primitive được sử dụng để khởi tạo variable và mang giá trị
+  từ min: -128 max: 127.
+- **case**: được sử dụng cùng với switch. 
+- **catch**: catch được sử dụng để bắt 1 exception. được sử dụng với cú pháp try - catch - catch -.. finally .
+- **char**: là 1 data type primitive, được dùng để khai báo variable và được dùng để lưu kí tự, nếu lưu 1 number thì number đó sẽ parse sang Unicode table
+[bảng chuyển đổi](https://en.wikipedia.org/wiki/List_of_Unicode_characters).
+- **class**: dùng để khởi tạo 1 class.
+- **continue**: dùng để tiếp tục loop hoặc while. Nó sẽ tiếp tục loop vòng lặp mới, và 
+bỏ các câu lệnh phía sau continue.
+- **default**: được sử dụng trong switch, nếu không thoãi các case thì default sẽ được thực thưc thi.
+- **do**: sử dụng kết hợp với while, do while(điều kiện) sẽ được thực thi ít nhất 1 lần. nếu thoãi điều kiện sẽ loop.
+- **double**: là 1 primitive data type, dùng để khai báo 1 variable lưu trữ 64 bit với 
+chữ số thập phân lên đến 15 chữ số sau dấu phẩy.
+- **else**: else là 1 nhánh thây thế của if. hoặc else if.
+- **enum**: enum dùng để khai báo 1 list cứng. Hàm khởi tạo của enum luôn luôn private
+hoặc default. Thường sử dụng kết hợp với switch statement.
+- **extends**: là keyword chỉ định ràng 1 class con đang kế thừa 1 class cha. hoặc 1 
+interface đang kế thừa 1 interface khác.
+- **final**: là keyword được ứng dụng cho class, method, variable. nếu ứng dụng vào class, thì class đó sẽ không
+được kế thừa, nếu ứng dụng vào method, thì method đó sẽ không được override, nhưng lưu ý có thể sử dụng lại nhưng không được override.
+Còn final ứng dung cho field thì field đó không đươc thay đổi sau khi khởi tạo. 
+Chú ý nếu khởi tạo final với List thì ta không được update địa chỉ list đó nhưng vẫn có thể 
+  add, remove các element của list đó. 
+- **finally**: được sử dụng chung với try catch finally hoặc try finally, là trang thái luôn luôn được thực thi
+mặc dù vào try hay catch. Thường dùng để close connection, clean up dữ liệu. 
+Thường thì sẽ thực thi sau try, nếu return có trong try thì sẽ thực thi finally trước khi return, còn đối với catch, thực thi sau catch nếu handle đúng exception, và trước nếu ko đúng exception.
+- **float**: là 1 primitive data type, được khởi tạo 1 variable mang 32 bit, và với number có 
+khoảng 6 or 7 chữ số đăng sau dấu phẩy. 
+- **for**: Sử dụng cho loop statement,với cố định số vòng lặp.  
+- **if**: Sử dụng với điều kiện, nếu điều kiện true thì sẽ vào thực thi if.
+- **implements**: được dùng để 1 class kế thừa 1 interface, lưu ý rằng:   
+  1 class sẽ có thể implements nhiều interface nhưng chỉ extends 1 class duy nhất.   
+  1 interface chỉ có thể sử dụng keyword extend và có thể extend nhiều interface khác.
+- **instanceOf**: được sử dụng để kiểm tra xem liệu 1 object có phải là 1 instance của 1
+class hoặc interface không.
+- **interface**: Là keyword để khởi tạo 1 interface và mặc định các method của interface là 
+1 method trừu tưởng không có body mặc định và public.  
+  Từ java 8 interface có thêm default và static method.  
+  Từ java 9 có thêm private method.
+- **long**: là 1 primitive data type sử dụng để khai báo variable với lưu trữ 64 bit number sô nguyên.
+- **new**: được sử dụng để new 1 object
+- **null**: chỉ định rằng object không chỉ định bất kì giá trị nào.
+- **package**: được sử dụng chỉ định class hiện tại đang ở trong package nào. được khai báo bên trong 1 file java.
+- **private**: là key word để khai báo phạm vi truy cập của 1 variable, method, inner class.
+không cho phép sử dụng giá trị từ phía ngoài class. Nếu ngoài class chỉ sử dụng get hoặc set để truy cập và điều chỉnh. Chứ 
+  không được sử dụng trực tiếp instance.variable .
+- **protected**: là keyword chỉ định phạm vi truy cập của 1 variable, method, contructor, inner class.
+Cho phép truy cập thông qua phương thức kế thừa.
+- **public**: là keyword chỉ định phạm vi truy cập của variable, method, constructor, class.
+cho phép truy cập ở bất kì đâu cho dù cùng package hay khác. Nếu không chỉ định phạm vi truy cập của 
+  class, variable, method,.. thì sẽ hiểu là các đối tượng cùng package sẽ có thể 
+  truy cập được.
+- **return**: được sử dụng để thoát method, và trả về giá trị và không chấp nhận return trong void method. Type của return phải 
+cùng 1 kiểu với kiểu trả về khai báo ở method.
+- **short**: là 1 kiểu data type của primitive, được khai báo variable có thể lưu trữ 16 bit number số nguyên.
+- **static**: là keyword ứng dụng cho variable class, method class, block, nested class.
+mục tiêu chính của static là việc tiết kiệm bộ nhớ.
+- **strictfp**: Java strictfp keyword đẻ đảo bảo tính linh động trong việc tính toán
+liên qua đế số thập phân (floating-point). để đảo bảo rằng chúng ta sẽ có cùng kết
+ nếu run ở trên nhiều platform khác nhau. Từ đó giúp chúng ta quan lí tốt hơn về 
+  tính toàn số thập phân. Có thể ứng dụng cho class, method, interface.
+- **super**: là keyword dùng để reference đến class cha. có thể call trực tiếp variable, method của class cha.
+có thể sử dụng như sau: super.variable, super.method(), super() ý là call contructor class cha.
+- **switch**: kết hợp với case để quyết định case nào dược thực thi. nếu thoãi điều kiện.
+- **synchronized**: dùng để xử lí đồng bộ trong chương trình có multiThread. Ứng dụng cho method, block code.
+- **this**: là keyword chỉ định đến object hiện tại trong method hoặc contructor.
+- **throw**: chỉ định chính xác 1 exception được ném ra. Thường được sử dụng cho việc
+customize 1 exception cho 1 bussiness. Sử dụng Throw new ACBException();
+- **throws**: thông báo thông tin exception của method hoặc class có thể xảy ra.
+Thường sử dụng class A throws ABCException {}. Nếu exception là loại runtime (Nullpointer, Numberformat)
+  thì việc sử dung throws là option có cũng được không chỉ định trên method,class cũng được, 
+  còn đối với exception complier (IOexception) thì bắt buộc phải có throws. 
+- **transient**: được sử dụng trong serialization. Nếu bạn định nghĩa bất kì properties nào 
+là transient thì nó sẽ không được serialization.
+- **try**: được sử dụng để đảm bảo code được thực thi nếu có bất kì exception nào sảy ra 
+ta có thể chủ động catch và xử lí exception. nếu không sử dung try catch thì chương trình 
+  sẽ dừng nếu gặp exception.
+- **void**: được khai báo với method chỉ định rằng method này không trả về bất kì gía trị nào. 
+- **volatile**: Chỉ định rằng variable có thể thay đổi trong asynchonized. Đảm bảo rằng
+variable luôn được cập nhật gía trị mới nhất từ các thread đang sử dụng variable đó.
+- **while**: sử dung cho việc loop với không xác định số vòng loop. phù hợp cho việc 
+loop theo điều kiện nếu true thì sẽ vào trong block while. nếu false stop loop.
 
 ```java
 public class ShareFullCode {

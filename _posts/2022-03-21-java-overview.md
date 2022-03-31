@@ -260,6 +260,8 @@ double: xxx.123456789123456
   lật bit 0000000000001010 become 1111111111110101 = -11  
   -10 => 1111111111110110  
   lât bit 1111111111110110 become 0000000000001001 = 9  
+  
+
 - **Tính toán(Arithmetic)** * / + - %
   
   ```java 
@@ -273,11 +275,8 @@ double: xxx.123456789123456
      System.out.println(valueA + valueB); // 20
       //reset value
      System.out.println(valueA - valueB); // 0
-  ```  
-  
-
-
-   
+  ```
+  <br> 
 - **Shift** <<, >>, >>>  
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
@@ -294,7 +293,9 @@ double: xxx.123456789123456
      // push đủ 32 bit : 1111111111111111111111111110110
      // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```  
+   <br> 
 - **Relational**  comparison: < > <= >= instanceof,  equality: == !=
+  
   ```java
     class InstanceClass {}
     String str = "str";
@@ -304,10 +305,12 @@ double: xxx.123456789123456
     System.out.println(object instanceof InstanceClass); // always return false
     System.out.println(object2 instanceof InstanceClass); // return true
   ```
+   <br> 
 - **Bitwise** & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
-  | : có true thì tất cả ra true.  
+  | : có true thì tất cả ra true. 
+  
   ```java 
     valueA = 9 ; // 1001
     valueB = 10; // 1010
@@ -315,8 +318,9 @@ double: xxx.123456789123456
     System.out.println(valueA ^ valueB); // 0011 = 3
     System.out.println(valueA | valueB); // 1011 = 11
   ```  
-- **Logical** && ||
-  logical AND && : all true => true
+   <br> 
+- **Logical** && ||  
+  logical AND && : all true => true  
   logical OR || : only one condition true => true  
 - **Ternary** ? :
   ```java
@@ -329,12 +333,14 @@ double: xxx.123456789123456
     tương đươn với 
     return condition == true ? a : b;
   ```  
+   <br> 
 - **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
   Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
   ? là Assignment
   ```java
    System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
   ```  
+   <br> 
 - **Chú ý về operator**
   ```java
   // Operator && vs & : tất cả true thì sẽ true
@@ -370,7 +376,7 @@ double: xxx.123456789123456
         //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
     }
   ```
-v3
+v4
 ## Keyword
 
 1. abstract: là keyword để khởi tao một class h

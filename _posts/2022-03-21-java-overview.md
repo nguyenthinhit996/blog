@@ -224,7 +224,7 @@ double: xxx.123456789123456
 - **Unary**: toán tử 1 ngôi  
   - Prefix: ++expr --expr +expr -expr ~(lật bit) !(cho boolean) : có hiệu ứng thực thi
   hiện tại
-  - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại  
+  - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại   
   
   ```java
     valueA = 10;
@@ -253,7 +253,7 @@ double: xxx.123456789123456
     System.out.println(valueA); //10
     System.out.println(valueB); //10
     ```  
-  
+    
   Giải thích ~ operator   
   Decimal number to Binary number:   
   10 => 0000000000001010   
@@ -261,23 +261,23 @@ double: xxx.123456789123456
   -10 => 1111111111110110  
   lât bit 1111111111110110 become 0000000000001001 = 9
       
-  
-- **Tính toán(Arithmetic)** * / + - %
-
-```java 
-   System.out.println(valueA * valueB); // 100
-    //reset value
-   System.out.println(valueA / valueB); // 1
-    //reset value
-   valueB = 7;
-   System.out.println(valueA % valueB); // 3
-    //reset value;
-   System.out.println(valueA + valueB); // 20
-    //reset value
-   System.out.println(valueA - valueB); // 0
-```
     
+- **Tính toán(Arithmetic)** * / + - %
   
+  ```java 
+     System.out.println(valueA * valueB); // 100
+      //reset value
+     System.out.println(valueA / valueB); // 1
+      //reset value
+     valueB = 7;
+     System.out.println(valueA % valueB); // 3
+      //reset value;
+     System.out.println(valueA + valueB); // 20
+      //reset value
+     System.out.println(valueA - valueB); // 0
+  ```
+    
+    
 - **Shift** <<, >>, >>>  
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
@@ -295,7 +295,7 @@ double: xxx.123456789123456
    // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```
       
-  
+    
 - **Relational**  comparison: < > <= >= instanceof,  equality: == !=
   ```java
   class InstanceClass {}
@@ -308,7 +308,7 @@ double: xxx.123456789123456
   
   ```
       
-  
+    
 - **Bitwise** & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
@@ -321,12 +321,12 @@ double: xxx.123456789123456
   System.out.println(valueA | valueB); // 1011 = 11
   ```
       
-  
+    
 - **Logical** && ||
   logical AND && : all true => true
   logical OR || : only one condition true => true
     
-  
+    
 - **Ternary** ? :
   ```java
   if(condition == true) {
@@ -340,7 +340,7 @@ double: xxx.123456789123456
   
   ```
       
-  
+    
 - **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
   Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
   ? là Assignment
@@ -348,7 +348,7 @@ double: xxx.123456789123456
    System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
   ```
       
-  
+    
 - **Chú ý về operator**
   ```java
   // Operator && vs & : tất cả true thì sẽ true

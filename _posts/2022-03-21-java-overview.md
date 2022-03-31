@@ -283,49 +283,47 @@ double: xxx.123456789123456
        nhớ là bit thêm vào đầu luôn là số 1
   
   ```java
-   System.out.println(valueA >> 2); // 10 / (2^2) = 10 / 4 = 2
-   System.out.println(valueA << 2); // 10 * (2^2) = 10 * 4 = 2
-   System.out.println(-valueA >>> 1); // 2147483643
-   // get get Binary signed 2's complement of -10 = 1111111111110110
-   // push đủ 32 bit : 1111111111111111111111111110110
-   // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
+     System.out.println(valueA >> 2); // 10 / (2^2) = 10 / 4 = 2
+     System.out.println(valueA << 2); // 10 * (2^2) = 10 * 4 = 2
+     System.out.println(-valueA >>> 1); // 2147483643
+     // get get Binary signed 2's complement of -10 = 1111111111110110
+     // push đủ 32 bit : 1111111111111111111111111110110
+     // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```  
 - **Relational**  comparison: < > <= >= instanceof,  equality: == !=
   ```java
-  class InstanceClass {}
-  String str = "str";
-  InstanceClass object = null;
-  InstanceClass object2 = new InstanceClass();
-  System.out.println(str instanceof String); // always return true
-  System.out.println(object instanceof InstanceClass); // always return false
-  System.out.println(object2 instanceof InstanceClass); // return true
-  
+    class InstanceClass {}
+    String str = "str";
+    InstanceClass object = null;
+    InstanceClass object2 = new InstanceClass();
+    System.out.println(str instanceof String); // always return true
+    System.out.println(object instanceof InstanceClass); // always return false
+    System.out.println(object2 instanceof InstanceClass); // return true
   ```  
 - **Bitwise** & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
   | : có true thì tất cả ra true.  
   ```java 
-  valueA = 9 ; // 1001
-  valueB = 10; // 1010
-  System.out.println(valueA & valueB); // 1000 = 8
-  System.out.println(valueA ^ valueB); // 0011 = 3
-  System.out.println(valueA | valueB); // 1011 = 11
+    valueA = 9 ; // 1001
+    valueB = 10; // 1010
+    System.out.println(valueA & valueB); // 1000 = 8
+    System.out.println(valueA ^ valueB); // 0011 = 3
+    System.out.println(valueA | valueB); // 1011 = 11
   ```  
 - **Logical** && ||
   logical AND && : all true => true
   logical OR || : only one condition true => true  
 - **Ternary** ? :
   ```java
-  if(condition == true) {
-    return a;
-  }else {
-    return b;
-  }
-  
-  tương đươn với 
-  return condition == true ? a : b;
-  
+    if(condition == true) {
+      return a;
+    }else {
+      return b;
+    }
+    
+    tương đươn với 
+    return condition == true ? a : b;
   ```  
 - **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
   Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
@@ -368,7 +366,7 @@ double: xxx.123456789123456
         //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
     }
   ```
-v1
+v2
 ## Keyword
 
 1. abstract: là keyword để khởi tao một class h

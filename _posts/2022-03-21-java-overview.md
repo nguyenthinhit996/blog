@@ -209,23 +209,24 @@ Primitive Data Type:
 | double      | 0.0f          | 8 byte       | min: 1.7e−308 max: 1.7e+308                  |
 
 **Chú ý**  
-Đối với kiểu float và double: 
-3.43-038 có nghĩa là 3.4 * 10 mũ -38 
-3.43+038 có nghĩa là 3.4 * 10 mũ 38 
+Đối với kiểu float và double:   
+3.43-038 có nghĩa là 3.4 * 10 mũ -38  
+3.43+038 có nghĩa là 3.4 * 10 mũ 38.   
 Để sử dung kiểu float và double chúng ta nên nói đến độ chính xác (precision) là con số thập phân
-sau dấu chấm, kiểu float thì có 6 hoặc 7 con số còn kiểu double thì khoản 15 chữ số sau dấu chấm.
-float : xxx.1234567
+sau dấu chấm, kiểu float thì có 6 hoặc 7 con số còn kiểu double thì khoản 15 chữ số sau dấu chấm.  
+float : xxx.1234567  
 double: xxx.123456789123456
 
 Đối với kiểu Char: Java sử dụng Unicode System.
 
 ## Operator
 
-- Unary: toán tử 1 ngôi  
+- **Unary**: toán tử 1 ngôi  
   - Prefix: ++expr --expr +expr -expr ~(lật bit) !(cho boolean) : có hiệu ứng thực thi
   hiện tại
-  - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại
-  ```java
+  - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại  
+  
+```java
   valueA = 10;
   valueB = 10;
   System.out.println(valueA ++); // 10 after that 11
@@ -251,7 +252,8 @@ double: xxx.123456789123456
   System.out.println(~ valueB); // 9
   System.out.println(valueA); //10
   System.out.println(valueB); //10
-  ```
+  ```  
+  
   Giải thích ~ operator   
   Decimal number to Binary number:   
   10 => 0000000000001010   
@@ -260,7 +262,7 @@ double: xxx.123456789123456
   lât bit 1111111111110110 become 0000000000001001 = 9
   
   
-- Tính toán(Arithmetic): * / + - %
+- **Tính toán(Arithmetic)**: * / + - %
 ```java 
    System.out.println(valueA * valueB); // 100
     //reset value
@@ -274,7 +276,7 @@ double: xxx.123456789123456
    System.out.println(valueA - valueB); // 0
 ```
   
-- Shift: <<, >>, >>>  
+- **Shift**: <<, >>, >>>  
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
   ,>>> trường hợp value dương giống với >>  
@@ -291,7 +293,7 @@ double: xxx.123456789123456
    // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```
   
-- Relational:  comparison: < > <= >= instanceof,  equality: == !=
+- **Relational**:  comparison: < > <= >= instanceof,  equality: == !=
   ```java
   class InstanceClass {}
   String str = "str";
@@ -302,7 +304,8 @@ double: xxx.123456789123456
   System.out.println(object2 instanceof InstanceClass); // return true
   
   ```
-- Bitwise: & ^ |  
+  
+- **Bitwise**: & ^ |  
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
   | : có true thì tất cả ra true.  
@@ -313,11 +316,13 @@ double: xxx.123456789123456
   System.out.println(valueA ^ valueB); // 0011 = 3
   System.out.println(valueA | valueB); // 1011 = 11
   ```
-- Logical: && ||
+  
+- **Logical**: && ||
   logical AND && : all true => true
   logical OR || : only one condition true => true
 
-- Ternary: ? :
+
+- **Ternary**: ? :
   ```java
   if(condition == true) {
     return a;

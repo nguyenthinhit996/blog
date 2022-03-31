@@ -61,6 +61,7 @@ bên trong.
 Covert các kiểu chuyển sang nhau String to number và ngược lại,  
 Convert number số int to float , float to double, to Bigdecimal...  
 Làm tròn trong java.
+(https://www.javatpoint.com/java-variables) có Java Variable Example
 
 ### [Java Nâng Cao](www.google.com)
 

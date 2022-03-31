@@ -19,6 +19,10 @@ If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
 3. [Tính năng](#tính-năng)
 4. [Chi tiết Run](#chú-ý)
 4. [Download Java và set path](#chú-ý)
+4. [JDK, JRE và JVM](#chú-ý)
+4. [DataType](#chú-ý)
+4. [Operator](#chú-ý)
+4. [Keyword](#chú-ý)
 
 
 ##  Giới thiệu Java
@@ -114,7 +118,7 @@ khi đã có file.class thì ra run file.class vậy lúc run time sẽ theo flo
 [java-runtime-processing.png]  
 ClassLoader: là 1 tiến trình con của JRE.
 ByteCode Verifier: Kiểm tra đoan code có hợp lệ để tránh truy cập bất hợp pháp đối tượng 
-Interpreted: Read bytecode stream sau đó thưcj thi diễn giải code.  
+Interpreted: Read bytecode stream sau đó thực thi diễn giải code.  
 
 ## Download Java và set path
 
@@ -131,7 +135,269 @@ Có 2 loại set:
   Thêm vào path  
   [evn03.PNG]   
   [evn04.PNG]  
+
+## JDK, JRE và JVM
+
+- JDK, JRE and JVM là platform phụ thuộc vào OS, mỗi OS khác nhau sẽ có sự configuaration khác
+nhau, nhưng Java là 1 platform độc lập. có thể run mọi OS, miễn sau ở đó có JVM đã cài đặc.
+
+- JVM viết tắt của Java Virtual Machine là máy 1 máy ảo, được gọi là máy ảo vì nó không tồn tại vật lí.
+JVM cung cấp runtime enviroment mà nơi đó thực thi bytecode. Ở đó cũng thực thi được 
+  các chương trình được viết từ những ngôn ngữ khác được complier thành java bytecode.
+- JRE viết tắt của Java Runtime Environment là bộ công cụ phần mêm được sử dụng bở dev java.
+JRE bao ngồm JVM và 1 số thư viện bên trong đó ví dụ: rt.jar.
+- JDK viết tắt của Java Development Kit. JDK bao ngồm JRE và thêm 1 số tools như javac, java, ...
+[jdk.png]
   
+## Variable  
+Variable là biến của java, sẽ giữ giá trị trong chương trình java lúc thực thi. Mỗi biến
+được chỉ định bằng data type nó mang. Trong java có 3 loại biến local, instance, static.
+- Local: biến được tạo trong body của method, bạn có thể chỉ sử dụng biến này trong method này , method khác không thể
+thể truy cập. Một biến local không thể tạo với keyword **static**.
+- Instance: biến được tạo ngoài method nhưng trong class. Biến Instance không được khởi tạo với keyword **static**.
+Nó được gọi là biến Instance bởi bì giá trị của biến thuộc 1 Instance chỉ định và không chia sẽ giá trị này 
+  giữa các instance.
+- Static: biến static được tạo với từ khóa static. Nó không thể là biến local. Static biến có thể chia sẽ giá trị 
+giữa các instance của class nhưng trong bộ nhớ chỉ tạo ra 1 lân và sử dụng nó mặc dù cho có bao nhiên instance đang 
+  sử dụng nó.
+  
+```java 
+public class ShareFullCode {
+
+  Integer variableInstance = 10; //this is variable instance
+  static Integer variableStatic = 10; // this is variable static
+  
+  void method () {
+    Integer variableLocal = 10; // this is variable local
+    //somecode...
+  }
+  
+  public static void main (String [] args){
+    ShareFullCode instance1 = new ShareFullCode(); //this is variable instance
+    ShareFullCode instance2 = new ShareFullCode(); //this is variable instance
+    ShareFullCode instance3 = new ShareFullCode(); //this is variable instance
+     
+    System.out.println(instance1.variableInstance); // variableInstance of instance instance1 
+    System.out.println(instance2.variableInstance); // variableInstance of instance instance2 
+    System.out.println(instance3.variableInstance); // variableInstance of instance instance3 
+  
+    System.out.println(instance1.variableStatic); // they use same variableStatic
+    System.out.println(instance1.variableStatic); // they use same variableStatic
+    System.out.println(instance1.variableStatic); // they use same variableStatic
+  }
+}
+```
+
+## DataType
+Data type xác định sự khác nhau về khích thước và giá trị lưu trữ của biến. Có 2 kiểu của Data Type: 
+- Primitive data type: Kiểu nguyên thủy như là *boolean, char, byte, short, int, float, double, long.*
+Là những loại đã đựơc xây dựng sẵn trong java, có giá trị default khác null.
+- Non Primitive data type: Kiểu không phải nguyên thủy như Classes, Interfaces, Array, String,...
+[java-data-types.png]
+
+Primitive Data Type:  
+
+| Syntax      | Default Value | Default size |     Range          |
+| ----------- | ------------- | ------------ | ------------------ |
+| boolean     | false         | 1 bit        | true or false              |
+| char        | '\u0000'      | 2 byte       | between '\u0000' (or 0) to '\uffff' (or 65,535 inclusive)              |
+| byte        | 0             | 1 byte       | min: -128 max: 127              |
+| short       | 0             | 2 byte       | min: -32,768 max: 32,767                  |
+| int         | 0             | 4 byte       | min: -2,147,483,648 max: 2,147,483,647                  |
+| long        | 0L            | 8 byte       | min: -9,223,372,036,854,775,808 max: 9,223,372,036,854,775,807                  |
+| float       | 0.0f          | 4 byte       | min: 3.4e−038 max: 3.4e+038                  |
+| double      | 0.0f          | 8 byte       | min: 1.7e−308 max: 1.7e+308                  |
+
+**Chú ý**  
+Đối với kiểu float và double: 
+3.43-038 có nghĩa là 3.4 * 10 mũ -38 
+3.43+038 có nghĩa là 3.4 * 10 mũ 38 
+Để sử dung kiểu float và double chúng ta nên nói đến độ chính xác (precision) là con số thập phân
+sau dấu chấm, kiểu float thì có 6 hoặc 7 con số còn kiểu double thì khoản 15 chữ số sau dấu chấm.
+float : xxx.1234567
+double: xxx.123456789123456
+
+Đối với kiểu Char: Java sử dụng Unicode System.
+
+## Operator
+
+- Unary: toán tử 1 ngôi  
+  - Prefix: ++expr --expr +expr -expr ~(lật bit) !(cho boolean) : có hiệu ứng thực thi
+  hiện tại
+  - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại
+  ```java
+  valueA = 10;
+  valueB = 10;
+  System.out.println(valueA ++); // 10 after that 11
+  System.out.println(valueB --); // 10 after that 9
+  System.out.println(valueA); //11
+  System.out.println(valueB); //9
+  
+  //reset value
+  System.out.println(++ valueA); // 11
+  System.out.println(-- valueB); // 9
+  System.out.println(valueA); //11
+  System.out.println(valueB); //9
+  
+  //reset value
+  System.out.println(+ valueA); // 10
+  System.out.println(- valueB); // -10
+  System.out.println(valueA); //10
+  System.out.println(valueB); //10
+  
+  //reset value
+   valueB = -10;
+  System.out.println(~ valueA); // -11
+  System.out.println(~ valueB); // 9
+  System.out.println(valueA); //10
+  System.out.println(valueB); //10
+  ```
+  Giải thích ~ operator   
+  Decimal number to Binary number:   
+  10 => 0000000000001010   
+  lật bit 0000000000001010 become 1111111111110101 = -11  
+  -10 => 1111111111110110  
+  lât bit 1111111111110110 become 0000000000001001 = 9
+  
+  
+- Tính toán(Arithmetic): * / + - %
+```java 
+   System.out.println(valueA * valueB); // 100
+    //reset value
+   System.out.println(valueA / valueB); // 1
+    //reset value
+   valueB = 7;
+   System.out.println(valueA % valueB); // 3
+    //reset value;
+   System.out.println(valueA + valueB); // 20
+    //reset value
+   System.out.println(valueA - valueB); // 0
+```
+  
+- Shift: <<, >>, >>>  
+  << = value * (2 mũ số shift)  
+  ,>> = value / (2 mũ số shift)  
+  ,>>> trường hợp value dương giống với >>  
+  ,>>> trường hợp value âm dịch bit:
+       get Binary signed 2's complement value thêm đủ 32 bit và sau đó dịch 1 bit
+       nhớ là bit thêm vào đầu luôn là số 1
+  
+  ```java
+   System.out.println(valueA >> 2); // 10 / (2^2) = 10 / 4 = 2
+   System.out.println(valueA << 2); // 10 * (2^2) = 10 * 4 = 2
+   System.out.println(-valueA >>> 1); // 2147483643
+   // get get Binary signed 2's complement of -10 = 1111111111110110
+   // push đủ 32 bit : 1111111111111111111111111110110
+   // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
+  ```
+  
+- Relational:  comparison: < > <= >= instanceof,  equality: == !=
+  ```java
+  class InstanceClass {}
+  String str = "str";
+  InstanceClass object = null;
+  InstanceClass object2 = new InstanceClass();
+  System.out.println(str instanceof String); // always return true
+  System.out.println(object instanceof InstanceClass); // always return false
+  System.out.println(object2 instanceof InstanceClass); // return true
+  
+  ```
+- Bitwise: & ^ |  
+  & : true & true => true , còn lại ra false  
+  ^ : giống ra false , khác nhau ra true  
+  | : có true thì tất cả ra true.  
+  ```java 
+  valueA = 9 ; // 1001
+  valueB = 10; // 1010
+  System.out.println(valueA & valueB); // 1000 = 8
+  System.out.println(valueA ^ valueB); // 0011 = 3
+  System.out.println(valueA | valueB); // 1011 = 11
+  ```
+- Logical: && ||
+  logical AND && : all true => true
+  logical OR || : only one condition true => true
+
+- Ternary: ? :
+  ```java
+  if(condition == true) {
+    return a;
+  }else {
+    return b;
+  }
+  
+  tương đươn với 
+  return condition == true ? a : b;
+  
+  ```
+- Assignment: =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
+  Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
+  ? là Assignment
+  ```java
+   System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
+  ```
+- Chú ý về operator 
+  ```java
+  // Operator && vs & : tất cả true thì sẽ true
+     && gặp condition false thì sẽ stop ko check điều kiện phía sau 
+     & check hết tất cả điều kiện cho dù gặp true hay false
+  
+  // Operator || vs | : only one true thì sẽ true
+     || gặp condition true thì sẽ stop ko check điều kiện phía sau 
+     | check hết tất cả điều kiện cho dù gặp true hay false
+  
+    void fun01 () {
+       System.out.println("fun01");
+       return true;
+    }
+    void fun02 () {
+       System.out.println("fun02");
+       return false;
+    }
+  
+   if( fun02() && fun01() ) {  // gặp false thì dừng lại chỉ call fun02
+        //ko vào được trong dây vì ko thoãi all true
+    }
+    
+    if( fun02() & fun01() ) { // gặp false thì run tiếp call fun02 vs fun01
+        //ko vào được trong dây vì ko thoãi all true
+    }
+  
+    if( fun01() || fun02() ) {  // gặp true thì dừng lại chỉ call fun01
+        //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
+    }
+    
+    if( fun01() | fun02() ) { // gặp true thì run tiếp call fun02 vs fun01
+        //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
+    }
+  ```
+
+## Keyword
+
+1. abstract: là keyword để khởi tao một class h
+
+```java
+public class ShareFullCode {
+
+  public static void main(String[] args) {
+    float a = 123f;
+    float b = 123.1234567f;
+    float c = 123.12345678934567f;
+    System.out.println(a); //123.0
+    System.out.println(b); //123.12346
+    System.out.println(c); //123.12346
+
+    double aa = 123d;
+    double bb = 123.1234567d;
+    double cc = 123.12345678901234567890d;
+    System.out.println(aa); //123.0
+    System.out.println(bb); //123.1234567
+    System.out.println(cc); //123.12345678901235
+  }
+}
+
+```
+
+
 ```java
 import java.util.Random;
 import java.lang.Math;

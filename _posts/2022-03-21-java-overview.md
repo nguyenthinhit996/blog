@@ -422,7 +422,7 @@ Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if
   ```
   Ta có sơ đồ:  
 
-  [if.PNG]
+  ![if.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if.PNG)
 
 #### if else
   
@@ -435,7 +435,7 @@ Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if
   ```
   Ta có sơ đồ:  
 
-  [if-else.PNG]
+  ![if-else.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else.PNG)
 
 
 #### if else-if else
@@ -455,7 +455,7 @@ Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if
   ```
   Ta có sơ đồ:
   
-  [if-else-if-else.PNG]
+  ![if-else-if-else.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else-if-else.PNG)
 
 #### if lòng if
 
@@ -468,7 +468,7 @@ Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if
   ```
   Ta có sơ đồ:
   
-  [if-if.PNG]
+  ![if-if.PNG](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-if.PNG)
 
 
 ### switch

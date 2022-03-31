@@ -23,8 +23,17 @@ If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
 - [Biến](#variable)
 - [DataType](#datatype)
 - [Operator](#operator)
-- [Keyword](#keyword)
-
+- [Trạng thái xử lí](#keyword)
+  - [if-else](#keyword)
+  - [switch](#keyword)
+  - [for](#keyword)
+  - [while](#keyword)
+  - [do-while](#keyword)
+  - [break](#keyword)
+  - [continue](#keyword)
+- [Keyword](#keyword)  
+- [Bài tập](#keyword)
+- [Lời kết](#keyword)
 
 ##  Giới thiệu Java
 
@@ -390,6 +399,85 @@ double: xxx.123456789123456
     }
   ```
 
+## Trạng thái xử lí
+
+  Java thực thi code từ trên xuống dưới. Trạng thái code được thực thi theo thứ tự xuất hiện của chúng
+Tuy nhiên java cung cấp những trạng thái được sử dụng để điều kiển trình tự của java code. Nó là 
+một trong những tính năng cơ bản của java.  
+  Cung cấp 3 trạng thái của code: 
+  - Trang thái quyết định: If else , switch.
+  - Trạng thái loop: for, while, do while, for-each.
+  - Trạng thái nhảy: continue, break.  
+Chúng ta sẽ đi tìm hiểu từng mảng của trạng thái.
+    
+### if-else
+Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if. ta có trạng thái đầu tiên
+
+#### if
+  
+  ```java
+    if(condition) {
+        //some code
+    }
+  ```
+  Ta có sơ đồ:  
+
+  [if.PNG]
+
+#### if else
+  
+  ```java
+    if(condition) {
+        //some code
+    }else {
+        // some code
+    }
+  ```
+  Ta có sơ đồ:  
+
+  [if-else.PNG]
+
+
+#### if else-if else
+
+  ```java
+    if (condition) {
+        //some code
+    } else if (condition 2){
+        // some code
+    } else if (condition 3){
+        // some code
+    }
+    //...
+    } else {
+        // some code
+    }
+  ```
+  Ta có sơ đồ:
+  
+  [if-else-if-else.PNG]
+
+#### if lòng if
+
+  ```java
+    if (condition) {
+        if (condition 2) {
+            //some code
+        }
+    }
+  ```
+  Ta có sơ đồ:
+  
+  [if-if.PNG]
+
+
+### switch
+### for
+### while
+### do-while
+### break
+### continue
+
 ## Keyword
 
 - **abstract**: là keyword để khởi tao một class trừu tượng. 1 class trừu tượng không thể
@@ -481,75 +569,15 @@ variable luôn được cập nhật gía trị mới nhất từ các thread đ
 - **while**: sử dung cho việc loop với không xác định số vòng loop. phù hợp cho việc 
 loop theo điều kiện nếu true thì sẽ vào trong block while. nếu false stop loop.
 
-```java
-public class ShareFullCode {
 
-  public static void main(String[] args) {
-    float a = 123f;
-    float b = 123.1234567f;
-    float c = 123.12345678934567f;
-    System.out.println(a); //123.0
-    System.out.println(b); //123.12346
-    System.out.println(c); //123.12346
+## Bài Tập
 
-    double aa = 123d;
-    double bb = 123.1234567d;
-    double cc = 123.12345678901234567890d;
-    System.out.println(aa); //123.0
-    System.out.println(bb); //123.1234567
-    System.out.println(cc); //123.12345678901235
-  }
-}
+1 vài bài tập
 
-```
+## Lời kết
 
+Bàì viết tham khảo các page sau: 
+- [javatpoint](https://www.javatpoint.com/java-tutorial)
+- [w3schools](https://www.w3schools.com/java/)
 
-```java
-import java.util.Random;
-import java.lang.Math;
-
-public class ShareFullCode {
-
-    // function
-    static long sumPow2(int n) {
-
-        if (n < 0 || n > 255) {
-            return 0;
-        }
-
-        long sum = 0;
-
-        for (int i = 1; i <= n; i++) {
-            // round number value nearest
-            sum = sum + Math.round(Math.pow(i,2));
-        }
-
-        return sum;
-    }
-
-    // Only for testing
-    public static void main(String[] args) {
-        Random random = new Random();
-        int n = random.nextInt(255);
-        System.out.println("N: " + n);
-        long result = sumPow2(n);
-        System.out.println("Total pow 2 of N:" + result);
-    }
-}
-```
-Để testing online bạn làm như sau: 
-+ B1: Copy all code above.
-+ B2: Open page [Test](https://www.tutorialspoint.com/compile_java_online.php){:target="_blank"} Jdk 1.8
-+ B3: Xoá hêt code (toàn bộ class HelloWorld) có trong page. 
-+ B4: Paste code vừa copy ở trên vào console của page. 
-+ B5: Chọn Execute và show ra kết quả.
-
-
-
-## Chú ý
-+ Kiển tra đầu vào đúng là số nguyên dương 0 <= N <= 255
-
-
-[Link Go back 1000 excercise](https://nguyenthinhit996.github.io/blog/2021-11-17-1000-exercise/)
-  
-Thanks.
+Xin cảm ơn. Peter

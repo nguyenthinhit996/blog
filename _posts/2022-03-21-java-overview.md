@@ -14,16 +14,16 @@ Exception Handling in Java, JDK, JVM, Data Type, Operator.
 If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
 
 # Nội dung
-1. [Overview Java](#giới-thiệu-java)
-2. [Lịch Sử](#lịch-sử)
-3. [Tính năng](#tính-năng)
-4. [Chi tiết Run](#chi-tiết-run)
-4. [Download Java và set path](#download-java-và-set-path)
-4. [JDK, JRE và JVM](#jdk-jre-và-jvm)
-4. [Biến](#variable)
-4. [DataType](#datatype)
-4. [Operator](#operator)
-4. [Keyword](#chú-ý)
+- [Overview Java](#giới-thiệu-java)
+- [Lịch Sử](#lịch-sử)
+- [Tính năng](#tính-năng)
+- [Chi tiết Run](#chi-tiết-run)
+- [Download Java và set path](#download-java-và-set-path)
+- [JDK, JRE và JVM](#jdk-jre-và-jvm)
+- [Biến](#variable)
+- [DataType](#datatype)
+- [Operator](#operator)
+- [Keyword](#keyword)
 
 
 ##  Giới thiệu Java

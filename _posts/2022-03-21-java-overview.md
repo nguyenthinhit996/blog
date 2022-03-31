@@ -221,7 +221,7 @@ double: xxx.123456789123456
 
 ## Operator
 
-- **Unary**: toán tử 1 ngôi  
+- **Unary toán tử 1 ngôi**  
   - Prefix: ++expr --expr +expr -expr ~(lật bit) !(cho boolean) : có hiệu ứng thực thi
   hiện tại
   - Postfix: expr++ expr--: sẽ được thực thi sau câu lênh hiện tại   
@@ -262,7 +262,7 @@ double: xxx.123456789123456
   lât bit 1111111111110110 become 0000000000001001 = 9  
   
 
-- **Tính toán(Arithmetic)** * / + - %
+- **Tính toán(Arithmetic) * / + - %**   
   
   ```java 
      System.out.println(valueA * valueB); // 100
@@ -279,7 +279,7 @@ double: xxx.123456789123456
   
   
     
-- **Shift** <<, >>, >>>  
+- **Shift <<, >>, >>>**    
   << = value * (2 mũ số shift)  
   ,>> = value / (2 mũ số shift)  
   ,>>> trường hợp value dương giống với >>  
@@ -296,7 +296,7 @@ double: xxx.123456789123456
      // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
   ```  
     
-- **Relational**  comparison: < > <= >= instanceof,  equality: == !=
+- **Relational comparison: < > <= >= instanceof,  equality: == !=**  
   
   ```java
     class InstanceClass {}
@@ -308,7 +308,7 @@ double: xxx.123456789123456
     System.out.println(object2 instanceof InstanceClass); // return true
   ```
     
-- **Bitwise** & ^ |  
+- **Bitwise & ^ |**     
   & : true & true => true , còn lại ra false  
   ^ : giống ra false , khác nhau ra true  
   | : có true thì tất cả ra true. 
@@ -321,7 +321,7 @@ double: xxx.123456789123456
     System.out.println(valueA | valueB); // 1011 = 11
   ```  
     
-- **Logical** && ||  
+- **Logical && ||**     
   logical AND && : all true => true  
   logical OR || : only one condition true => true  
 - **Ternary** ? :
@@ -336,8 +336,8 @@ double: xxx.123456789123456
     return condition == true ? a : b;
   ```  
     
-- **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
-  Các phép tính như sau value ? = xx   <=>  value = value ? xxx  
+- **Assignment** = += -= *= /= %= &= ^= |= <<= >>= >>>= 
+  Các phép tính như sau **value ? = xx**   <=>  **value = value ? xxx**    
   ? là Assignment
   ```java
    System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
@@ -378,7 +378,7 @@ double: xxx.123456789123456
         //vào được trong dây vì thõa điều kiện, gặp true đầu tiên thì vô
     }
   ```
-v5
+
 ## Keyword
 
 1. abstract: là keyword để khởi tao một class h

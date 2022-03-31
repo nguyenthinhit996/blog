@@ -276,7 +276,7 @@ double: xxx.123456789123456
       //reset value
      System.out.println(valueA - valueB); // 0
   ```
-    
+      
     
 - **Shift** <<, >>, >>>  
   << = value * (2 mũ số shift)  
@@ -293,7 +293,7 @@ double: xxx.123456789123456
    // get get Binary signed 2's complement of -10 = 1111111111110110
    // push đủ 32 bit : 1111111111111111111111111110110
    // dịch 1 bit sang phải: 1111111111111111111111111111011 = 2147483643
-  ```
+  ```  
       
     
 - **Relational**  comparison: < > <= >= instanceof,  equality: == !=
@@ -306,7 +306,7 @@ double: xxx.123456789123456
   System.out.println(object instanceof InstanceClass); // always return false
   System.out.println(object2 instanceof InstanceClass); // return true
   
-  ```
+  ```  
       
     
 - **Bitwise** & ^ |  
@@ -319,13 +319,13 @@ double: xxx.123456789123456
   System.out.println(valueA & valueB); // 1000 = 8
   System.out.println(valueA ^ valueB); // 0011 = 3
   System.out.println(valueA | valueB); // 1011 = 11
-  ```
+  ```  
       
     
 - **Logical** && ||
   logical AND && : all true => true
   logical OR || : only one condition true => true
-    
+      
     
 - **Ternary** ? :
   ```java
@@ -338,7 +338,7 @@ double: xxx.123456789123456
   tương đươn với 
   return condition == true ? a : b;
   
-  ```
+  ```  
       
     
 - **Assignment** =  += -= *= /= %= &= ^= |= <<= >>= >>>=  
@@ -346,7 +346,7 @@ double: xxx.123456789123456
   ? là Assignment
   ```java
    System.out.println(valueA %= 7); // valueA = valueA % 7 = 3
-  ```
+  ```  
       
     
 - **Chú ý về operator**

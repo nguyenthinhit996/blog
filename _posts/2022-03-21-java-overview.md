@@ -472,6 +472,22 @@ Trong trạng thái quyết định ta có if , if else, if else-if, if lòng if
 
 
 ### switch
+
+Switch sẽ thực thi trạng thái giống như if else bậc thang.  
+Giá trị của switch có thể mang là cái kiểu primitive, và những kiểu wapper như 
+Integer, Boolean,.. enum và string.  
+Giá trị của case phải là trực tiếp không được phép là 1 biến.  
+Giá trị của case phải là duy nhất nếu trùng giá complier sẽ lỗi.  
+Mỗi case có thể break hoặc không, nêu không có break nó sẽ thự thực thi next case.  
+Case default có thể có hoặc không. 
+
+
+  ```java
+    switch(condition):
+
+  ```
+
+
 ### for
 ### while
 ### do-while

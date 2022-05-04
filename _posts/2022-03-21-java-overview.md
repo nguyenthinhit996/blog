@@ -494,7 +494,7 @@ Case default có thể có hoặc không.
     }
 
   ```
-![switch](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else.PNG)
+![switch](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/switch.png)
 
 Trường hợp chúng ta không sử dụng  break cho switch
 
@@ -530,7 +530,7 @@ for(;;) loop vô tận ;
 
   ```
 
-![for](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else.PNG)
+![for](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/for.png)
 
 #### for each 
 

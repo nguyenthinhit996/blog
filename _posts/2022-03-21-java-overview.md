@@ -483,12 +483,71 @@ Case default có thể có hoặc không.
 
 
   ```java
-    switch(condition):
+    switch(condition) {
+      case value1 : 
+        somecode ;
+        somecode ;
+      break ;
+      case value2 : somecode ; break ;
+      case value3 : somecode ; break ;
+      default : systax;
+    }
+
+  ```
+![switch](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else.PNG)
+
+Trường hợp chúng ta không sử dụng  break cho switch
+
+  ```java
+    int value = 20;
+    switch(value) {
+      case 10 : 
+        somecode1 ;
+        somecode2 ;
+      case 20 : somecode3 ;
+      case 30 : somecode4 ;
+      default : somecode-default;
+    }
+
+    => sẽ thực thi somecode3 and somecode4 
+    vì sẽ thực thi tất cả statment sau khi match đầu tiên khi không có break. match ở đây là 20 sẽ thưc thi match 20 và những statement sau nó là 30 và default.
 
   ```
 
 
 ### for
+
+Cách sử dụng for, khi ta xác định được số vòng lặp cố định.  
+Khi sử dung for ta phải khởi tạo giá trị bạn đâu cho nó.   
+
+for(khởi tạo giá trị ; điều kiện loop; giá trị tăng hoặc giảm) {}  
+for(;;) loop vô tận ;  
+
+  ```java
+    for(int i=0; i< 10; i++){
+      //some code here
+    }
+
+  ```
+
+![for](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/if-else.PNG)
+
+#### for each 
+
+Dùng cho loop array hoặc list . 
+
+  ```java
+  List<Integer> list = new ArrayList<Integer>();
+    for(Integer element: list){
+      //some code here
+    }
+
+  ```
+
+**Chú ý** biến list không được null, nếu null sẽ throw exception nullpointer.  
+các element có thể được phép null.  
+
+
 ### while
 ### do-while
 ### break

@@ -16,11 +16,11 @@ subtitle: We can handle all skill in java
 [Note](#java-note)  
 [Interview](#java-interview)
 
-### [Java Giới Thiệu](www.google.com)
+### [Java Giới Thiệu](https://nguyenthinhit996.github.io/blog/2022-03-21-java-overview/)
 
 Giới thiệu xung quang Java, Syntax, Key word,  
 Exception Handling in Java, JDK, JVM, Data Type, Operator.  
-If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
+If Else, Switch, For, While, Continue, Break.
 
 ---
 

@@ -23,17 +23,17 @@ If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
 - [Biến](#variable)
 - [DataType](#datatype)
 - [Operator](#operator)
-- [Trạng thái xử lí](#keyword)
-  - [if-else](#keyword)
-  - [switch](#keyword)
-  - [for](#keyword)
-  - [while](#keyword)
-  - [do-while](#keyword)
-  - [break](#keyword)
-  - [continue](#keyword)
+- [Trạng thái xử lí](#trạng-thái-xử-lí)
+  - [if-else](#if-else)
+  - [switch](#switch)
+  - [for](#for)
+  - [while](#while)
+  - [do-while](#do-while)
+  - [break](#break)
+  - [continue](#continue)
+- [Comment](#Comment)    
 - [Keyword](#keyword)  
-- [Bài tập](#keyword)
-- [Lời kết](#keyword)
+- [Lời kết](#lời-kết)  
 
 ##  Giới thiệu Java
 
@@ -508,8 +508,7 @@ Trường hợp chúng ta không sử dụng  break cho switch
       case 30 : somecode4 ;
       default : somecode-default;
     }
-
-    => sẽ thực thi somecode3 and somecode4 
+      
     vì sẽ thực thi tất cả statment sau khi match đầu tiên khi không có break. match ở đây là 20 sẽ thưc thi match 20 và những statement sau nó là 30 và default.
 
   ```
@@ -537,21 +536,150 @@ for(;;) loop vô tận ;
 Dùng cho loop array hoặc list . 
 
   ```java
-  List<Integer> list = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();
+    for(Integer element: list){
+      //some code here
+    }
+
+    List<Integer> list ;
+    for(Integer element: list){
+      //some code here
+    }
+
+    List<int> list = new ArrayList<int>(); // error unexpected type. should use object.
+    int[] arr = new int[] {1,2,3,4}; // array ok.
     for(Integer element: list){
       //some code here
     }
 
   ```
 
-**Chú ý** biến list không được null, nếu null sẽ throw exception nullpointer.  
-các element có thể được phép null.  
+**Chú ý** biến list không được null, nếu null sẽ throw **exception nullpointer**.  
+các element có thể được phép null.  Nếu biến list chưa được khởi tạo case sẽ xuất hiện lỗi stop app
+**error: variable a might not have been initialized**
 
 
 ### while
+
+Sử dụng cho việc lập đi lặp lại nếu trạng thái là true. phù hợp cho việc không biết được sẽ loop bao nhiêu lần. 
+
+  ```java
+
+    while(condition){
+      // update condition 
+      //some code here
+    }
+
+  ```
+
+Nếu conditon là true sẽ thực hiện loop, có thể kết hợp với break. 
+
+  ```java
+      int a=0;
+      while(a<10){
+            a++;
+            if(a == 5){
+                break;
+            }
+        }
+
+  ```
+
+Nếu condition luôn luôn true thì while sẽ loop vô tận while(true){} .
+
+![while](https://raw.githubusercontent.com/nguyenthinhit996/blog/master/assets/img/while.png)
+
+
 ### do-while
+
+Cũng giống như while sẽ loop khi gặp điều kiện true. nhưng ở đây sẽ thưc thi ít nhất 1 lần cho dù điều kiện ban đầu là true hay false. 
+
+  ```java
+
+      do{    
+      //code to be executed / loop body  
+      //update statement   
+      }while (condition);  
+
+  ```
+  ```java
+
+      do{    
+      //update statement   
+      }while (true);  //loop vô tận
+
+      do{    
+      //update statement   
+      }while (false);  //thưc thi 1 lần duy nhất
+
+  ```
+
 ### break
+
+break được sử dụng để thoát vòng lặp hoặc switch , while, do while. Nhưng chú ý ở đây break sẽ thoát
+trạn thái gần nhất, trong trường hợp inner loop thì break sẽ có giá trị trên loop gần break nhất. 
+
+  ```java
+
+      do{    
+        for(Integer i : list) {
+          break; // chỉ có tác dụng thoát khỏi for chứ không thoát khỏi do while được vì break sẽ 
+          // có thoat vòng lặp gần nó nhất.
+        }
+      }while (true);
+
+  ```
+
 ### continue
+
+Được sử dụng trong cấu trúc loop như for hoặc while, do while. Dùng để nhảy đến trạng thái tiếp theo mà không thực thi những dòng code dưới lệnh continue.  
+Cũng giống như break thì continue sẽ có giá trị với loop gần nó nhất trong trường hợp inner nhiều loop. 
+
+  ```java
+
+      do{    
+        for(Integer i : list) {
+            //some code 
+            if(condition true){
+              continue; // nhảy đến i tiếp theo của for, không thực thi code bên dưới câu lệnh này. 
+            }
+            // some code 
+        }
+      }while (true);
+
+  ```
+
+## Comment
+
+Comment chú thích trong java sẽ không được complier và interperter. Dùng để gải thích code 
+clean code ...  
+
+ ```java
+
+      comment 1 dòng trong java 
+       // single comment 
+
+
+        comment multi line java
+       /*
+         this is comment multi-line
+         List<Integer> l1 = new ArrayList<Integer>();
+         System.out.println(l1);
+       */
+
+
+        comment doc java
+       /**... */
+       //comment doc:  information for the class, method, constructor, fields etc.
+
+       /**
+        * created time: 2022-12-12
+        * author: thinh.
+       */
+       class a {} ;
+
+  ```
+
 
 ## Keyword
 
@@ -643,11 +771,6 @@ ta có thể chủ động catch và xử lí exception. nếu không sử dung 
 variable luôn được cập nhật gía trị mới nhất từ các thread đang sử dụng variable đó.
 - **while**: sử dung cho việc loop với không xác định số vòng loop. phù hợp cho việc 
 loop theo điều kiện nếu true thì sẽ vào trong block while. nếu false stop loop.
-
-
-## Bài Tập
-
-1 vài bài tập
 
 ## Lời kết
 

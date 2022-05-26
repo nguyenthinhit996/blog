@@ -796,7 +796,8 @@ Ví dụ. rutTieng(), saoKeLuongHangThang().
 **Variable** bắt đầu bằng chữ in thường, và các chữ sau in hoa. Và sẽ đặt tên theo danh từ tương ứng. 
 ví dụ: listHocSinh. pigs.
 
-**Constant** Hằng số không thay đổi được sau khi thay đổi.  Các đặt tên là luôn in hoa từ và đặt tên giống như variable. Ví dụ: MIN_VALUE, NUMBER_ACCOUNT
+**Constant** Hằng số không thay đổi được sau khi thay đổi.  Các đặt tên là luôn in hoa từ và cách nhau bởi dấu 
+_ (underscore) đặt tên giống như variable. Ví dụ: MIN_VALUE, NUMBER_ACCOUNT
 
 
 ## Lời kết

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Giới thiệu Java
-subtitle: Overview, Syntax, Control Statament,...
+subtitle: Các version của java, và các loại phí
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [java]
@@ -33,7 +33,6 @@ If Else, Switch, For, While, Continue, Break. Các bài tập luyện tập.
   - [continue](#continue)
 - [Comment](#Comment)    
 - [Keyword](#keyword)  
-- [Quy ước đặc tên](#quy-ước)  
 - [Lời kết](#lời-kết)  
 
 ##  Giới thiệu Java
@@ -776,28 +775,6 @@ ta có thể chủ động catch và xử lí exception. nếu không sử dung 
 variable luôn được cập nhật gía trị mới nhất từ các thread đang sử dụng variable đó.
 - **while**: sử dung cho việc loop với không xác định số vòng loop. phù hợp cho việc 
 loop theo điều kiện nếu true thì sẽ vào trong block while. nếu false stop loop.
-
-
-## Quy Ước
-
-Có 1 số số quy ước chung về cách đặt tên trong java. Các quy ước này được cộng đồng java cũng như là 
-sun Microsystems and Netscape. Đây không phải luật lệ nếu bạn vào project nào có nhưng quy định khác 
-thì bãn cũng chấp nhận thôi vì có thể project bạn có quy định riêng thì ta theo thôi. 
-
-**Package** luôn là chữ in thường. Và là danh từ. Ví du: controller, domain, company. 
-
-**Class** Bắt đầu bằng chứ in hoa và in thường hết, nếu có trên 1 từ thì bắt đầu bằng in hoa luôn. Và nó là danh từ hoặc cụm danh từ.  Ví dụ : HocSinh, Ban, Xe. 
-
-**Interface** Giống như class cũng đặt in hoa chữ bắt đầu. Ví dụ: TaiKhoan, NganHang.
-
-**Method** bắt đầu bằng chữ in thường và các chữ sau in hoa và chúng ta sử dụng động từ cho nó. 
-Ví dụ. rutTieng(), saoKeLuongHangThang().
-
-**Variable** bắt đầu bằng chữ in thường, và các chữ sau in hoa. Và sẽ đặt tên theo danh từ tương ứng. 
-ví dụ: listHocSinh. pigs.
-
-**Constant** Hằng số không thay đổi được sau khi thay đổi.  Các đặt tên là luôn in hoa từ và đặt tên giống như variable. Ví dụ: MIN_VALUE, NUMBER_ACCOUNT
-
 
 ## Lời kết
 
